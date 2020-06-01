@@ -14,10 +14,14 @@
                 <div class="product-status-wrap">
                     <h4 style="display:inline">Daftar Pemilih</h4>
                     <p></p>
-                    <div class="custom-pro-edt-ds" style="display:inline; margin-bottom:7px">
-                        <form action="/admin/voters/cari" method="GET" style="float: left">
-                            <input type="text" name="cari" placeholder="Cari Pemilih .." value="{{ old('cari') }}" class="btn btn-ctl-bt waves-effect waves-light m-r-10">
-                            <input type="submit" value="CARI" class="btn btn-ctl-bt waves-effect waves-light m-r-10">
+                   
+                    <div class="custom-pro-edt-ds" style="margin-bottom:7px">
+                    
+                        <form action="/admin/voters/cari" method="GET" style="display:inline" role="search"> 
+                        <div class="col-sm-2">
+                        <input type="text" name="cari" placeholder="Cari Pemilih .." value="{{ old('cari') }}" class="form-control">
+                        </div>
+                        <input type="submit" value="CARI" class="btn btn-ctl-bt waves-effect waves-light m-r-10" >    
                         </form>
 
                         <form action="/admin/voters/tambah" style="display:inline; float:right">

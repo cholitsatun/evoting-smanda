@@ -62,7 +62,7 @@
 
 				<!-- Main -->
 					<div id="main">
-						<div class="inner">
+						<div class="inner col-sm-12">
 							
 								<center><h1>Selamat Datang di Sistem E-Voting SMAN 2 Pati </h1></center>
 								<center><h2 style="padding-top: 30px">Silakan pilih calon anda</h2></center>
@@ -72,9 +72,9 @@
 									<section class="tiles">
 										
 										@foreach ($paslon as $key => $item)
-											<article class="style1 col-sm-4">
+											<div class="article style1 {{count($paslon)<3 && $key == 0 ? 'offset-sm-2':''}} col-sm-4">
 												<span class="image">
-													<img src="/gambar/{{$item->foto}}" alt="" style="width: 100%; height: 300px;"/>
+													<img src="/gambar/{{$item->foto}}" alt="" style="width: 100%; height: 400px;"/>
 												</span>
 												<a>
 													<h2 style="color:white">{{$item->nama_ketos}}-{{$item->nama_waketos}}</h2>
@@ -88,7 +88,7 @@
 														</form>
 													</div>
 												</a>
-											</article>
+											</div>
 											<!-- The Modal -->
 											<div class="modal" id="myModal{{isset($item->visimisi) ? $item->visimisi->id : ""}}">
 												<div class="modal-dialog">
@@ -127,8 +127,8 @@
 													
 													</div>
 													<div class="modal-footer">
-														<button type="submit" class="vote">Yes</button>
-														<button type="button" data-dismiss="modal">Cancel</button>
+														<button type="submit" class="vote" style="background-color: #383838;">Yes</button>
+														<button type="button" data-dismiss="modal" style="background-color: #383838;">Cancel</button>
 		
 													</div>
 									

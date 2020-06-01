@@ -36,13 +36,7 @@
 				<p style="color:red">{{$errors->first('password')}}</p>
 			@endif
 
-		<!-- Footer -->
-			<footer id="footer">
-				
-				<ul class="copyright">
-					<center><li>&copy; Untitled.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li></center>
-				</ul>
-			</footer>
+			<center><p class="copyright" style="color:grey; font-size:12px">&copy; Untitled. Credits: <a href="http://html5up.net">HTML5 UP</a></p></center>
 
 		<!-- Scripts -->
 			<script src="/eventually/assets/js/main.js"></script>

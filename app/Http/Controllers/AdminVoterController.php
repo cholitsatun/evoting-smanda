@@ -42,11 +42,9 @@ class AdminVoterController extends Controller
      */
     public function store(Request $request)
     {
-        // $errors = $this->validate($request, [
-        //     'nisn' => 'required | unique:voters,nisn',
-        //     'namapemilih' => 'required',
-        //     'kelas' => 'required',
-        // ]);
+        $errors = $this->validate($request, [
+            'nisn' => 'required | unique:voters,nisn',
+        ]);
 
         $password = $this->randomString();
         $pemilih = Voter::create([
@@ -136,10 +134,10 @@ class AdminVoterController extends Controller
 		$cari = $request->cari;
  
     		// mengambil data dari table pegawai sesuai pencarian data
-		$voter = Voter::where('name','like',"%".$cari."%")->paginate();
+		$a = Voter::where('name','like',"%".$cari."%")->paginate();
  
     		// mengirim data pegawai ke view index
-		return view('/admin/voters/voter',compact('voter'));
+		return view('/admin/voters/voter',compact('a'));
  
 	}
 
